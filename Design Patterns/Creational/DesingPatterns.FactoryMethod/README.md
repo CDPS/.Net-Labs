@@ -1,4 +1,4 @@
-**Factory Method Pattern
+**Factory Method Pattern**
 
 Shopping cart class wich depending on the order country, we calculate the shipping label. See diagram to understand pattern implmentation
 
