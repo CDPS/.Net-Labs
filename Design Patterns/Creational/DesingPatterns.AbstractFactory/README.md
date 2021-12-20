@@ -1,5 +1,9 @@
 **Abstract Factory Pattern**
 
+
+*"Provide an Interface for creating families of related or dependend objects without specifying their concrete clasess"*
+
+
 Shopping cart class wich depending on the order country, we calculate the shipping label, invoice tag, and summary . See diagram to understand pattern implmentation!
 
 
