@@ -5,25 +5,25 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", "{AC725793-3D60-41EE-A721-C3EBCCA594B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SimpleFactory", "Creational\DesignPatterns.SimpleFactory\DesignPatterns.SimpleFactory.csproj", "{DFAB101E-3161-41CE-A8B0-ED42FCF7112C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SimpleFactory", "Creational\DesingPatterns.SimpleFactory\DesignPatterns.SimpleFactory.csproj", "{DFAB101E-3161-41CE-A8B0-ED42FCF7112C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.FactoryMethod", "Creational\DesignPatterns.FactoryMethod\DesignPatterns.FactoryMethod.csproj", "{43130936-D2DF-4DCD-ACCA-0942CDBD5D3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.FactoryMethod", "Creational\DesingPatterns.FactoryMethod\DesignPatterns.FactoryMethod.csproj", "{43130936-D2DF-4DCD-ACCA-0942CDBD5D3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.AbstractFactory", "Creational\DesignPatterns.AbstractFactory\DesignPatterns.AbstractFactory.csproj", "{87CAC419-6D25-4664-9ED2-B2D705CE7E69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.AbstractFactory", "Creational\DesingPatterns.AbstractFactory\DesignPatterns.AbstractFactory.csproj", "{87CAC419-6D25-4664-9ED2-B2D705CE7E69}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Prototype", "Creational\DesignPatterns.Prototype\DesignPatterns.Prototype.csproj", "{EFC6C3D5-C835-4135-8767-3480D3854D84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Prototype", "Creational\DesingPatterns.Prototype\DesignPatterns.Prototype.csproj", "{EFC6C3D5-C835-4135-8767-3480D3854D84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Builder", "Creational\DesignPatterns.Builder\DesignPatterns.Builder.csproj", "{EE647494-F51F-4B9F-97D9-7AF7BD16BACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Builder", "Creational\DesingPatterns.Builder\DesignPatterns.Builder.csproj", "{EE647494-F51F-4B9F-97D9-7AF7BD16BACF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral", "Behavioral", "{BE134724-3BD8-4F9B-AA4F-25FB87872837}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Strategy", "Behavioral\DesignPatterns.Strategy\DesignPatterns.Strategy.csproj", "{221B09F9-AC12-4A46-AD51-2931045C91AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Strategy", "Behavioral\DesingPatterns.Strategy\DesignPatterns.Strategy.csproj", "{221B09F9-AC12-4A46-AD51-2931045C91AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Singleton", "Creational\DesignPatterns.Singleton\DesignPatterns.Singleton.csproj", "{0E0EA2E3-2F06-4905-A70C-A03D08388F7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Singleton", "Creational\DesingPatterns.Singleton\DesignPatterns.Singleton.csproj", "{0E0EA2E3-2F06-4905-A70C-A03D08388F7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Command", "Behavioral\DesignPatterns.Command\DesignPatterns.Command.csproj", "{AFF1637A-EB10-4B73-A989-85B32F7A9204}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Command", "Behavioral\DesingPatterns.Command\DesignPatterns.Command.csproj", "{AFF1637A-EB10-4B73-A989-85B32F7A9204}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Bridge", "Behavioral\DesignPatterns.Bridge\DesignPatterns.Bridge.csproj", "{D31FCF56-11CC-40C3-8E8B-B15E8C9A976C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Bridge", "Behavioral\DessingPatterns.Bridge\DesignPatterns.Bridge.csproj", "{D31FCF56-11CC-40C3-8E8B-B15E8C9A976C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
