@@ -9,3 +9,5 @@ Example:
 In this example we implement and text Editor class wich contains a text area that support undo operations via Memento pattern
 
 ![DesingPatterns-Memento](https://user-images.githubusercontent.com/11037848/148145662-3b669ce3-779e-40e4-abe0-2a6581c9e66d.png)
+
+To learn more, please check: https://www.youtube.com/watch?v=_Q5rXfGuyLQ
