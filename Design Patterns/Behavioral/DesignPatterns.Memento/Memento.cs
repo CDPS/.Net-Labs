@@ -10,7 +10,7 @@ namespace DesignPatterns.Memento
             text = textToSave;
         }
 
-        internal string getSavedText()
+        internal string GetSavedText()
         {
             return text;
         }

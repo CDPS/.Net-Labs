@@ -20,7 +20,7 @@ namespace DesignPatterns.Memento
 
         internal void Restore(Memento memento)
         {
-            this.text = memento.getSavedText();
+            this.text = memento.GetSavedText();
         }
     }
 }
