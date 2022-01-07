@@ -1,0 +1,25 @@
+﻿@page
+@model CreateModel
+
+<h2>Creating New Restaurant</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Restaurant.Name"></label>
+        <input asp-for="Restaurant.Name" class="form-control"/>
+        <span class="text-danger" asp-validation-for="Restaurant.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Restaurant.Locatiion"></label>
+        <input asp-for="Restaurant.Locatiion" class="form-control"/>
+        <span class="text-danger" asp-validation-for="Restaurant.Locatiion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Restaurant.Cuisine"></label>
+        <select class="form-control" asp-for="Restaurant.Cuisine" asp-items="Model.CuisineTypes">
+        </select>
+        <span class="text-danger" asp-validation-for="Restaurant.Locatiion"></span>
+    </div>
+    <button type="submit" class ="btn-primary">Save</button>
+
+</form>

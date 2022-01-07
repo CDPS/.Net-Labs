@@ -1,0 +1,15 @@
+﻿@page
+@model DetailModel
+
+<h2>@Model.Restaurant.Name</h2>
+<div>
+    Id: @Model.Restaurant.Id
+</div>
+<div>
+    Localtion: @Model.Restaurant.Locatiion
+</div>
+<div>
+    Cuisine: @Model.Restaurant.Cuisine
+</div>
+
+<a asp-page="./List" class="btn-primary"> All restaurants</a>
