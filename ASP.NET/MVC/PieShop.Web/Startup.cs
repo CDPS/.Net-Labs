@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PieShop.Data.CategoryRepository;
+using PieShop.Data.DBContexts;
 using PieShop.Data.PieRepository;
+using PieShop.Data.Repository;
 
 namespace PieShop.Web
 {
@@ -19,8 +22,17 @@ namespace PieShop.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IPieRepository, InMemoryPieRepository>();
-            services.AddSingleton<ICategoryRepository, InMemoryCategoryRepository>();
+
+            services.AddDbContextPool<PieShopDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("PieShopDb"),
+                b => b.MigrationsAssembly(typeof(PieShopDbContext).Assembly.FullName));
+            });
+
+
+            services.AddScoped(typeof(IRepository<>), typeof(SQLServerRepository<>));
+            services.AddScoped<IPieRepository, SqlServerPieRepository>();
+            services.AddScoped<ICategoryRepository, SqlServerCategoryRepository>();
             services.AddControllersWithViews();
         }
 

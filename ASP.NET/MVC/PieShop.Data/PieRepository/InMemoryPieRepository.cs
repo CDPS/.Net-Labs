@@ -1,4 +1,5 @@
 ﻿using PieShop.Data.CategoryRepository;
+using PieShop.Data.Repository;
 using PieShop.Entiies.Pie;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace PieShop.Data.PieRepository
 {
-    public class InMemoryPieRepository : IPieRepository
+    public class InMemoryPieRepository : InMemoryRepository<Pie>, IPieRepository
     {
         private readonly IEnumerable<Pie> _pies;
 

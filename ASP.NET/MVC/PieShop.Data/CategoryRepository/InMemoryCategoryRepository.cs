@@ -1,9 +1,10 @@
-﻿using PieShop.Entiies.Pie;
+﻿using PieShop.Data.Repository;
+using PieShop.Entiies.Pie;
 using System.Collections.Generic;
 
 namespace PieShop.Data.CategoryRepository
 {
-    public class InMemoryCategoryRepository : ICategoryRepository
+    public class InMemoryCategoryRepository : InMemoryRepository<Category> , ICategoryRepository
     {
         private readonly IEnumerable<Category> _categories;
 
