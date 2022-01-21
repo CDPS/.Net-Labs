@@ -8,6 +8,7 @@ using PieShop.Data.CategoryRepository;
 using PieShop.Data.DBContexts;
 using PieShop.Data.PieRepository;
 using PieShop.Data.Repository;
+using PieShop.Web.Models;
 
 namespace PieShop.Web
 {
@@ -23,6 +24,9 @@ namespace PieShop.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddHttpContextAccessor();
+            services.AddSession();
+
             services.AddDbContextPool<PieShopDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("PieShopDb"),
@@ -33,6 +37,7 @@ namespace PieShop.Web
             services.AddScoped(typeof(IRepository<>), typeof(SQLServerRepository<>));
             services.AddScoped<IPieRepository, SqlServerPieRepository>();
             services.AddScoped<ICategoryRepository, SqlServerCategoryRepository>();
+            services.AddScoped<ShoppingCart>(sp=> ShoppingCart.GetCart(sp));     
             services.AddControllersWithViews();
         }
 
@@ -52,7 +57,7 @@ namespace PieShop.Web
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

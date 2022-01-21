@@ -1,26 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PieShop.Data.PieRepository;
 using PieShop.Web.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PieShop.Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPieRepository _pieRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,
+                               IPieRepository  pieRepository)
         {
             _logger = logger;
+            _pieRepository = pieRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                PiesOfTheWeek = _pieRepository.GetPiesOfTheWeek()
+            };
+            return View(homeViewModel);
         }
 
         public IActionResult Privacy()

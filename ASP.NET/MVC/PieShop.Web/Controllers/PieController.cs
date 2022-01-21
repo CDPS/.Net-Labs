@@ -25,5 +25,13 @@ namespace PieShop.Web.Controllers
             };
             return View(pieListViewModel);
         }
+
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepostory.GetPiesById(id);
+            if(pie == null)
+                return NotFound();
+            return View(pie);
+        }
     }
 }
