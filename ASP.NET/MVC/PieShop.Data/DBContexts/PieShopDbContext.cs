@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PieShop.Entiies.Pie;
+using PieShop.Entities.Orders;
 using PieShop.Entities.ShoppingCart;
 
 namespace PieShop.Data.DBContexts
@@ -9,6 +10,9 @@ namespace PieShop.Data.DBContexts
         public DbSet<Pie> Pies { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
         public PieShopDbContext(DbContextOptions<PieShopDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

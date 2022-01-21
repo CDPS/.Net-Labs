@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PieShop.Data.CategoryRepository;
 using PieShop.Data.DBContexts;
+using PieShop.Data.OrderRepository;
 using PieShop.Data.PieRepository;
 using PieShop.Data.Repository;
 using PieShop.Web.Models;
@@ -33,10 +34,10 @@ namespace PieShop.Web
                 b => b.MigrationsAssembly(typeof(PieShopDbContext).Assembly.FullName));
             });
 
-
             services.AddScoped(typeof(IRepository<>), typeof(SQLServerRepository<>));
             services.AddScoped<IPieRepository, SqlServerPieRepository>();
             services.AddScoped<ICategoryRepository, SqlServerCategoryRepository>();
+            services.AddScoped<IOrderRepository, SqLServerOrderRepository>();
             services.AddScoped<ShoppingCart>(sp=> ShoppingCart.GetCart(sp));     
             services.AddControllersWithViews();
         }
