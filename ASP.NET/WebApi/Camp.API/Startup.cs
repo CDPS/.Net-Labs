@@ -30,6 +30,10 @@ namespace Camp.API
                 b => b.MigrationsAssembly(typeof(CampDbContext).Assembly.FullName));
             });
 
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
+
             services.AddScoped(typeof(IRepository<>), typeof(SQLServerRepository<>));
             services.AddScoped<ICampRepository, SqlServerCampRepository>();
             services.AddScoped<ISpeakerRepository, SqlServerSpeakerRepository>();
